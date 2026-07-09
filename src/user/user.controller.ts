@@ -1,12 +1,12 @@
-import { Controller ,Get} from '@nestjs/common';
+import { Controller ,Get, Query} from '@nestjs/common';
 
 @Controller('user')
 export class UserController {
 
 @Get()
-getUser(){
+getUser(@Query('name')name:string){
     return [
-        {id:1,name:'Eden'}
+        {id:1,name:name||'Eden'}
     ]
 }
 
