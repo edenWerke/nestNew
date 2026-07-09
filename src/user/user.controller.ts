@@ -1,4 +1,5 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import { CreateUserDto } from './dto/create-user.dto';
 
 @Controller('user')
 export class UserController {
@@ -24,5 +25,9 @@ export class UserController {
       id,
       name: 'Eden',
     };
+  }
+  @Post()
+  createUser(@Body() createUserDto:CreateUserDto){
+    return {data:createUserDto,message:'User created successfully'}
   }
 }
