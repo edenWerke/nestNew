@@ -12,6 +12,7 @@ interface User{
 @Injectable()
 export class UserService {
     private users:User[]=[
-        {id:1,name:'eden ',email:'eden@2024.com'}
+        {id:1,name:'eden ',email:'eden@2024.com'},
+        {id:2, name:'natty', email:'natty@2024.com'}
     ]
 }
